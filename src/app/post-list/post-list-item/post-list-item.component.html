@@ -1,0 +1,20 @@
+<div [class.list-group-item-danger]="post.loveIts<0" [class.list-group-item-success]="post.loveIts>0"
+     class="container-fluid list-group-item">
+  <div class="row justify-content">
+    <h3 class="col-md-8 text-left">{{post.title}}</h3>
+    <p class="font-weight-light font-italic col-md-4 text-right">{{ post.created_at | date : "yyyy/MM/dd HH:mm"}}</p>
+    <p class="font-weight-light col-md-12 text-left">{{ post.content }}</p>
+  </div>
+
+  <div class="row justify-content">
+    <button (click)="onUpLikes()" class="ml-3 btn btn-success align-content-start" type="button">
+      <span class="text-left ">Love It !!</span>
+    </button>
+    <button (click)="onDownLikes()" class="ml-3 btn btn-danger align-content-star" type="button">
+      <span class="text-left ">Don't love It !!</span>
+    </button>
+    <button (click)="onDeletePost()" class="ml-3 btn btn-danger align-content-star align-items-end" type="button">
+      <span class="text-left ">Supprimer post</span>
+    </button>
+  </div>
+</div>

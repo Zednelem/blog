@@ -1,0 +1,18 @@
+<div class=" container-fluid list-group">
+  <div class="row">
+    <h2 class="col-4">Posts</h2>
+    <div class="col-8 text-right">
+      <button (click)="onSort()" class="btn align-content-start">Trier</button>
+
+      <button (click)="onShuffle()" class="btn align-content-start">Mélanger</button>
+
+
+      <button (click)="onUpload()" class="btn btn-link align-content-start">Sauvegarder</button>
+
+
+      <button (click)="onDownload()" class="btn btn-link align-content-start">Télécharger</button>
+    </div>
+  </div>
+  <app-post-list-item *ngFor="let post of posts" [postId]="post.id"></app-post-list-item>
+
+</div>
